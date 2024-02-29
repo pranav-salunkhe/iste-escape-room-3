@@ -12,7 +12,7 @@ const App = () => {
   };
 
   return (
-    <div className='cont'>
+    <div className='container'>
       {showClue ? (
         <ClueScreen imageUrl={clueImage} />
       ) : (
