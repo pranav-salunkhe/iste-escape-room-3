@@ -10,7 +10,7 @@ const PasscodeInput = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (passcode === import.meta.env.VITE_PASS) {
+    if (passcode.toLowerCase() === import.meta.env.VITE_PASS) {
       onSubmit();
     } else {
       alert('Incorrect passcode. Please try again.');
