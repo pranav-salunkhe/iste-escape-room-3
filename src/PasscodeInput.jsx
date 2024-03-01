@@ -22,7 +22,7 @@ const PasscodeInput = ({ onSubmit }) => {
   return (
     <div className="passcode-container">
       <div className="background-image" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="passcode-form">
         <input
           type="password"
           placeholder="Enter passcode"
