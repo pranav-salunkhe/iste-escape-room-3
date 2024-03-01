@@ -1,5 +1,6 @@
 // PasscodeInput.js
 import React, { useState } from 'react';
+import backgroundImage from './assets/daisy.jpeg'; // Import your background image
 
 const PasscodeInput = ({ onSubmit }) => {
   const [passcode, setPasscode] = useState('');
@@ -19,15 +20,18 @@ const PasscodeInput = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="password"
-        placeholder="Enter passcode"
-        value={passcode}
-        onChange={handleChange}
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="passcode-container">
+      <div className="background-image" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
+      <form onSubmit={handleSubmit} className="passcode-form">
+        <input
+          type="password"
+          placeholder="Enter passcode"
+          value={passcode}
+          onChange={handleChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 };
 
